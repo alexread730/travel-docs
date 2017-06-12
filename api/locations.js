@@ -44,12 +44,23 @@ router.post('/', (req, res, next) => {
 
 router.put('/:id', isValidId, (req, res, next) => {
   if (validLocation(req.body)) {
-    queries.update(req.params.id, req.body).then(location => {
+    queries
+    .update(req.params.id, req.body).then(location => {
       res.json(location[0]);
     })
   } else {
     next(new Error('Invalid Location'));
   }
+})
+
+router.delete('/:id', isValidId, (req, res) => {
+  queries
+  .delete(req.params.id)
+  .then(() => {
+    res.json({
+      deleted: true
+    });
+  });
 })
 
 module.exports = router;

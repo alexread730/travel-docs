@@ -12,5 +12,8 @@ module.exports = {
   },
   update(id, location) {
     return knex('location').where('id', id).update(location, '*');
+  },
+  delete(id) {
+    return knex('location').where('id', id).del();
   }
 }
