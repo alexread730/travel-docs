@@ -2,14 +2,21 @@
   "name": "travel-docs",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js",
+    "dev": "nodemon"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
     "knex": "^0.13.0",
+    "nodemon": "^1.11.0",
     "pg": "^6.2.4"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
   }
 }
