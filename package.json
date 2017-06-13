@@ -5,7 +5,8 @@
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
-    "dev": "nodemon"
+    "dev": "nodemon",
+    "test": "(dropdb --if-exists test-travel-docs && createdb test-travel-docs) && NODE_ENV=test mocha"
   },
   "author": "",
   "license": "ISC",
@@ -17,6 +18,9 @@
     "pg": "^6.2.4"
   },
   "devDependencies": {
-    "nodemon": "^1.11.0"
+    "chai": "^4.0.2",
+    "mocha": "^3.4.2",
+    "nodemon": "^1.11.0",
+    "supertest": "^3.0.0"
   }
 }

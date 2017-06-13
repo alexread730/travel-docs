@@ -6,4 +6,8 @@ module.exports = {
     client: 'pg',
     connection: 'postgres://localhost/travel-docs'
   },
+  test: {
+    client: 'pg',
+    connection: 'postgres://localhost/test-travel-docs'
+  }
 };
